@@ -58,8 +58,6 @@ from app.llm.model_config_resolver import (
     resolve_model_config_for_runtime,
 )
 from app.llm.stage_protocol import stage_payload, unified_system_prompt
-
-logger = logging.getLogger(__name__)
 from app.memory.jobs import enqueue_memory_capture
 from app.memory.service import MemoryService
 from app.observability import EventLog
@@ -74,6 +72,8 @@ from app.session.session_schema import (
     StepAgentResult,
 )
 from app.tools.tool_schema import ToolResult
+
+logger = logging.getLogger(__name__)
 
 STREAM_CHUNK_INTERVAL_SECONDS = 0.045
 MAX_TOOL_ACTIONS_PER_TURN = 32

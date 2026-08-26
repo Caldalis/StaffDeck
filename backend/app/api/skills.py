@@ -55,9 +55,6 @@ from app.security.permissions import (
 )
 from app.security.tenant import ensure_tenant
 from app.skills import SkillDistiller, SkillEditor
-
-_CHANNEL_LABELS = {"wechat": "微信", "wecom": "企业微信", "feishu": "飞书", "dingtalk": "钉钉"}
-
 from app.skills.skill_schema import (
     SkillCard,
     SkillCreateRequest,
@@ -80,6 +77,8 @@ from app.skills.nesting import (
     sop_capability_scope,
     validate_sop_nesting,
 )
+
+_CHANNEL_LABELS = {"wechat": "微信", "wecom": "企业微信", "feishu": "飞书", "dingtalk": "钉钉"}
 
 router = APIRouter(
     prefix="/api/enterprise/skills",
